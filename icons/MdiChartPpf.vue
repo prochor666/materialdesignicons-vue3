@@ -1,0 +1,24 @@
+<template>
+    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" :class="class" :viewBox="viewBox" :width="size" :height="size"><path d="M5 6V8C8.2 8 11.36 9.18 13.57 11.15C15.64 13 16.83 15.5 17 18H18.97A14 12.5 0 0 0 5 6M22 21H2V3H4V19H22Z" fill-rule="evenodd" clip-rule="evenodd" /></svg>
+</template>
+
+<script setup>
+defineExpose({
+    name: "spinner",
+});
+
+const props = defineProps({
+    class: {
+        type: String,
+        default: ''
+    },
+    size: {
+        type: [Number, String],
+        default: 24
+    },
+    viewBox: {
+        type: String,
+        default: '0 0 24 24',
+    },
+});
+</script>

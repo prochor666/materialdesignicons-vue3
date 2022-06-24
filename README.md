@@ -7,8 +7,17 @@ Icons from materialdesignicons.com rendered as PascalCase vue components with md
 ## How to
 
 ```
-<MdiAbacus size="48" class="text-rose-400" />
+<template>
+    <p>
+        <MdiAbacus class="text-rose-400" /> Hello world
+    </p>
+</tempalte>
+
+<script setup>
+import MdiAbacus from '../components/MdiAbacus.vue';
+</script>
 ```
+
 
 ## How to build your own
 
