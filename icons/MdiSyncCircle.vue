@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiSyncCircle",
 });
 
 const props = defineProps({

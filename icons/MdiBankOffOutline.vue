@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiBankOffOutline",
 });
 
 const props = defineProps({

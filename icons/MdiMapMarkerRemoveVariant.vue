@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiMapMarkerRemoveVariant",
 });
 
 const props = defineProps({

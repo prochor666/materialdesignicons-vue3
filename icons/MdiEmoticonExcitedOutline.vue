@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiEmoticonExcitedOutline",
 });
 
 const props = defineProps({

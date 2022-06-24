@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiLockOffOutline",
 });
 
 const props = defineProps({

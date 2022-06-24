@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiKeyboardF11",
 });
 
 const props = defineProps({

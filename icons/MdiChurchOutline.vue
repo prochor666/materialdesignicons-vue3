@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiChurchOutline",
 });
 
 const props = defineProps({

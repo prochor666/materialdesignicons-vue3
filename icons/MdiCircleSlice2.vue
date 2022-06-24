@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiCircleSlice2",
 });
 
 const props = defineProps({

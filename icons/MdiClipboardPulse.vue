@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiClipboardPulse",
 });
 
 const props = defineProps({

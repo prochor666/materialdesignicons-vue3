@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiAccountTieVoiceOffOutline",
 });
 
 const props = defineProps({

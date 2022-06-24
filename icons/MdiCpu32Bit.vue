@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiCpu32Bit",
 });
 
 const props = defineProps({

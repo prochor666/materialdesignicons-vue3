@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiSurroundSound51",
 });
 
 const props = defineProps({

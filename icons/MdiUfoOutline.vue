@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiUfoOutline",
 });
 
 const props = defineProps({

@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiWifiStrength2Alert",
 });
 
 const props = defineProps({

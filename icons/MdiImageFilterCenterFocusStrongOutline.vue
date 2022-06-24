@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiImageFilterCenterFocusStrongOutline",
 });
 
 const props = defineProps({

@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiHomeLightningBoltOutline",
 });
 
 const props = defineProps({

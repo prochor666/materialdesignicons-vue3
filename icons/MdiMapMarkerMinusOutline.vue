@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiMapMarkerMinusOutline",
 });
 
 const props = defineProps({

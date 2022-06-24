@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiAccountMultiplePlus",
 });
 
 const props = defineProps({

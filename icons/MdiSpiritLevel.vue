@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiSpiritLevel",
 });
 
 const props = defineProps({

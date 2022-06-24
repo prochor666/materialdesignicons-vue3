@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiFlaskOffOutline",
 });
 
 const props = defineProps({

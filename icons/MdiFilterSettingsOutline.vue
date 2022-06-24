@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiFilterSettingsOutline",
 });
 
 const props = defineProps({

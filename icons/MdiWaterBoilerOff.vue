@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiWaterBoilerOff",
 });
 
 const props = defineProps({

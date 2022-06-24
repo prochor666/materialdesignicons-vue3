@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiContentSaveCheckOutline",
 });
 
 const props = defineProps({

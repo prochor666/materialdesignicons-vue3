@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiHomeFloorNegative1",
 });
 
 const props = defineProps({

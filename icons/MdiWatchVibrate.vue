@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiWatchVibrate",
 });
 
 const props = defineProps({

@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiMicrosoftDynamics365",
 });
 
 const props = defineProps({

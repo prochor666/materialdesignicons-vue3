@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiFloorLampTorchiereVariantOutline",
 });
 
 const props = defineProps({

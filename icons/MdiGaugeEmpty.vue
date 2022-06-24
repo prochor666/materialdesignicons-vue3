@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiGaugeEmpty",
 });
 
 const props = defineProps({

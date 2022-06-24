@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiMonitorCellphone",
 });
 
 const props = defineProps({

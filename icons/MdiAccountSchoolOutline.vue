@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiAccountSchoolOutline",
 });
 
 const props = defineProps({

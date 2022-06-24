@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiFileDocumentRemoveOutline",
 });
 
 const props = defineProps({

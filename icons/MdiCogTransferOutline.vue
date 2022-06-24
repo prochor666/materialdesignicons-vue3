@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiCogTransferOutline",
 });
 
 const props = defineProps({

@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiHumanGreetingVariant",
 });
 
 const props = defineProps({

@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiVideo4KBox",
 });
 
 const props = defineProps({

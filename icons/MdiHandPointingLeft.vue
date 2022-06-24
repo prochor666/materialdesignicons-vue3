@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiHandPointingLeft",
 });
 
 const props = defineProps({

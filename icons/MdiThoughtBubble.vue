@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiThoughtBubble",
 });
 
 const props = defineProps({

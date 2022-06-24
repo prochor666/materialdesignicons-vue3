@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiAbjadHebrew",
 });
 
 const props = defineProps({

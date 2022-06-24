@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiDistributeVerticalCenter",
 });
 
 const props = defineProps({

@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiGoogleControllerOff",
 });
 
 const props = defineProps({

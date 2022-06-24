@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiTextToSpeechOff",
 });
 
 const props = defineProps({

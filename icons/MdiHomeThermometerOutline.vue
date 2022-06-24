@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiHomeThermometerOutline",
 });
 
 const props = defineProps({

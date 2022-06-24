@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiVideo3DVariant",
 });
 
 const props = defineProps({

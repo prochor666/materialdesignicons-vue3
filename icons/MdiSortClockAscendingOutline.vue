@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiSortClockAscendingOutline",
 });
 
 const props = defineProps({

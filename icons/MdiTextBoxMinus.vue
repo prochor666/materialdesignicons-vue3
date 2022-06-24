@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiTextBoxMinus",
 });
 
 const props = defineProps({

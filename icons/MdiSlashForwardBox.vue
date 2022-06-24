@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiSlashForwardBox",
 });
 
 const props = defineProps({

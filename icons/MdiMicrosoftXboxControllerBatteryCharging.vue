@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiMicrosoftXboxControllerBatteryCharging",
 });
 
 const props = defineProps({

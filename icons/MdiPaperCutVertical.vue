@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiPaperCutVertical",
 });
 
 const props = defineProps({

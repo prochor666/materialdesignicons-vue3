@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiMagnifyScan",
 });
 
 const props = defineProps({

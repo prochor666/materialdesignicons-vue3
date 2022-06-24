@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiDownloadNetworkOutline",
 });
 
 const props = defineProps({

@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiSourceBranchRefresh",
 });
 
 const props = defineProps({

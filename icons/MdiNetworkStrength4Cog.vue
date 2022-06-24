@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiNetworkStrength4Cog",
 });
 
 const props = defineProps({

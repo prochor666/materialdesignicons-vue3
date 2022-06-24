@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiPrinter3DNozzleHeat",
 });
 
 const props = defineProps({

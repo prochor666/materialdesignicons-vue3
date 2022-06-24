@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiRouterWirelessOff",
 });
 
 const props = defineProps({

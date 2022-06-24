@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiVolumeEqual",
 });
 
 const props = defineProps({

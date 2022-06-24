@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiSkipForwardOutline",
 });
 
 const props = defineProps({

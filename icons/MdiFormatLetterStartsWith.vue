@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiFormatLetterStartsWith",
 });
 
 const props = defineProps({

@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiWallSconceFlat",
 });
 
 const props = defineProps({

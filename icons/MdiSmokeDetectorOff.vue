@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiSmokeDetectorOff",
 });
 
 const props = defineProps({

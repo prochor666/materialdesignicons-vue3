@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiFacebookMessenger",
 });
 
 const props = defineProps({

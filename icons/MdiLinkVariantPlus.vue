@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiLinkVariantPlus",
 });
 
 const props = defineProps({

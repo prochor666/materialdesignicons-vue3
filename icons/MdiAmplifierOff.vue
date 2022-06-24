@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiAmplifierOff",
 });
 
 const props = defineProps({

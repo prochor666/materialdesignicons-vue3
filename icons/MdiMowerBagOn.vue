@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiMowerBagOn",
 });
 
 const props = defineProps({

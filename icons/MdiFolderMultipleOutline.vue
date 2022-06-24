@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiFolderMultipleOutline",
 });
 
 const props = defineProps({

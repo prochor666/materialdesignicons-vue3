@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiBarcodeOff",
 });
 
 const props = defineProps({

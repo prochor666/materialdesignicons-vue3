@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiGestureTwoDoubleTap",
 });
 
 const props = defineProps({

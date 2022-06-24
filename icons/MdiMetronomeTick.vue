@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiMetronomeTick",
 });
 
 const props = defineProps({

@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiSitemapOutline",
 });
 
 const props = defineProps({

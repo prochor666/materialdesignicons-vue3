@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiOrderNumericAscending",
 });
 
 const props = defineProps({

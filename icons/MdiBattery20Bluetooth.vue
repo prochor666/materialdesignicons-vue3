@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiBattery20Bluetooth",
 });
 
 const props = defineProps({

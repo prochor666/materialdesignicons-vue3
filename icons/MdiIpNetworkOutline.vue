@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiIpNetworkOutline",
 });
 
 const props = defineProps({

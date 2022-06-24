@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiBagPersonalOutline",
 });
 
 const props = defineProps({

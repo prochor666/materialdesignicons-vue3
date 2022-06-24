@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiHandBackRightOutline",
 });
 
 const props = defineProps({

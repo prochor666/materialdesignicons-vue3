@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiFoodHotDog",
 });
 
 const props = defineProps({

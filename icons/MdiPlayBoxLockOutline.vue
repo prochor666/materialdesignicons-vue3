@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiPlayBoxLockOutline",
 });
 
 const props = defineProps({

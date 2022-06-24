@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiRefreshAuto",
 });
 
 const props = defineProps({

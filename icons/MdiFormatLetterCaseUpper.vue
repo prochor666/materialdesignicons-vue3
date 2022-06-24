@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiFormatLetterCaseUpper",
 });
 
 const props = defineProps({

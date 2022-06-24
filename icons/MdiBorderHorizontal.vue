@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiBorderHorizontal",
 });
 
 const props = defineProps({

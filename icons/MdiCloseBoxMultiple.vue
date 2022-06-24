@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiCloseBoxMultiple",
 });
 
 const props = defineProps({

@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiArrowUpBoldHexagonOutline",
 });
 
 const props = defineProps({

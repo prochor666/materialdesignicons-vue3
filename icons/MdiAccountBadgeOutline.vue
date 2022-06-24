@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiAccountBadgeOutline",
 });
 
 const props = defineProps({

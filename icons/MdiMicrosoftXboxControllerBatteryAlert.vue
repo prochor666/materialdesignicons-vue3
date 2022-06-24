@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiMicrosoftXboxControllerBatteryAlert",
 });
 
 const props = defineProps({

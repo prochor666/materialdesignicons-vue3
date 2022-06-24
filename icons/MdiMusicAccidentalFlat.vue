@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiMusicAccidentalFlat",
 });
 
 const props = defineProps({

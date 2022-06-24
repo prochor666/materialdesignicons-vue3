@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiBlindsHorizontal",
 });
 
 const props = defineProps({

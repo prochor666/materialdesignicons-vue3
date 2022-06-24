@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiBookSettingsOutline",
 });
 
 const props = defineProps({

@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiCommentTextMultipleOutline",
 });
 
 const props = defineProps({

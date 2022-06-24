@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiEmailOpenMultiple",
 });
 
 const props = defineProps({

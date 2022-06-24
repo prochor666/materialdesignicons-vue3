@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiFaceWomanShimmerOutline",
 });
 
 const props = defineProps({

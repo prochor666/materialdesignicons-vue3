@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiPhoneSettingsOutline",
 });
 
 const props = defineProps({

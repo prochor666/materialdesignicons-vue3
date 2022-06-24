@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiAlignHorizontalLeft",
 });
 
 const props = defineProps({

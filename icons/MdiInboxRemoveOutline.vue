@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiInboxRemoveOutline",
 });
 
 const props = defineProps({

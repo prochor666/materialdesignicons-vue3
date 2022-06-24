@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiMoveResizeVariant",
 });
 
 const props = defineProps({

@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiSocialDistance2Meters",
 });
 
 const props = defineProps({

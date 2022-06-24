@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiAllInclusiveBox",
 });
 
 const props = defineProps({

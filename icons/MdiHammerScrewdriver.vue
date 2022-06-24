@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiHammerScrewdriver",
 });
 
 const props = defineProps({

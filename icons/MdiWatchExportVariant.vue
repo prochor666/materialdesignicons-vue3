@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiWatchExportVariant",
 });
 
 const props = defineProps({

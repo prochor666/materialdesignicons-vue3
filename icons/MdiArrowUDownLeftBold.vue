@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiArrowUDownLeftBold",
 });
 
 const props = defineProps({

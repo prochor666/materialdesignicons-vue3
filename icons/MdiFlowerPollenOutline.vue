@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiFlowerPollenOutline",
 });
 
 const props = defineProps({

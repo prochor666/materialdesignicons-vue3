@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiFormatVerticalAlignBottom",
 });
 
 const props = defineProps({

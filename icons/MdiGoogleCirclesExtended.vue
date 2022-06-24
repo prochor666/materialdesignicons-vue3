@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiGoogleCirclesExtended",
 });
 
 const props = defineProps({

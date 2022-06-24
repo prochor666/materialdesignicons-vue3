@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiPackageVariantClosedRemove",
 });
 
 const props = defineProps({

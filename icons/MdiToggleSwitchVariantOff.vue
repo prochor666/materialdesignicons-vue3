@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiToggleSwitchVariantOff",
 });
 
 const props = defineProps({

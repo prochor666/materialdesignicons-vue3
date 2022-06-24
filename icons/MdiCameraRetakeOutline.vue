@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiCameraRetakeOutline",
 });
 
 const props = defineProps({

@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiMusicBoxMultiple",
 });
 
 const props = defineProps({

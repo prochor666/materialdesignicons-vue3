@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiArrangeSendToBack",
 });
 
 const props = defineProps({

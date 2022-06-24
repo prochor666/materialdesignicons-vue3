@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiTagArrowUpOutline",
 });
 
 const props = defineProps({

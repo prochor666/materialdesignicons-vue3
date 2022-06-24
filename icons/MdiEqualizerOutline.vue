@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiEqualizerOutline",
 });
 
 const props = defineProps({

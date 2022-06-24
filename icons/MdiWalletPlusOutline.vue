@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiWalletPlusOutline",
 });
 
 const props = defineProps({

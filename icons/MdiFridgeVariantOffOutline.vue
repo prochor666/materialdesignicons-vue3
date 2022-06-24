@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiFridgeVariantOffOutline",
 });
 
 const props = defineProps({

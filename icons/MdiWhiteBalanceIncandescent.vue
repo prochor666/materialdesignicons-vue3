@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiWhiteBalanceIncandescent",
 });
 
 const props = defineProps({

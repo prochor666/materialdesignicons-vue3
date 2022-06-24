@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiCardsPlayingHeartMultipleOutline",
 });
 
 const props = defineProps({

@@ -63,19 +63,20 @@ def convert(content, svg_file):
     # joining result
     #vue_file = temp[0] + ''.join(ele.title() for ele in temp[1:])
     vue_file = f"Mdi{''.join(map(str.title, temp))}.vue"
+    vue_expose = f"Mdi{''.join(map(str.title, temp))}"
 
     tree.write(
         f"{library.target()}{vue_file}", encoding="utf-8")
 
     with open(f"{library.target()}{vue_file}") as template:
 
-        template = vue_component(template.read())
+        template = vue_component(template.read(), vue_expose)
         utils.file_save(
             f"{library.target()}{vue_file}", template)
 
 
 
-def vue_component(svg):
+def vue_component(svg, expose):
 
     template = '''<template>
     '''+svg+'''
@@ -83,7 +84,7 @@ def vue_component(svg):
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "'''+expose+'''",
 });
 
 const props = defineProps({

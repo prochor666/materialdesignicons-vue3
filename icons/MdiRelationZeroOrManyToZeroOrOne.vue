@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiRelationZeroOrManyToZeroOrOne",
 });
 
 const props = defineProps({

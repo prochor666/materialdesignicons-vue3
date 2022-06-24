@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiTimelinePlusOutline",
 });
 
 const props = defineProps({

@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiContactlessPaymentCircleOutline",
 });
 
 const props = defineProps({

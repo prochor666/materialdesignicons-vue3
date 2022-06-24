@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiFormatTextWrappingOverflow",
 });
 
 const props = defineProps({

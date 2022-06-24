@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiBookVariantMultiple",
 });
 
 const props = defineProps({

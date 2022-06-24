@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiCalendarBlankMultiple",
 });
 
 const props = defineProps({

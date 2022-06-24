@@ -4,7 +4,7 @@
 
 <script setup>
 defineExpose({
-    name: "spinner",
+    name: "MdiSortCalendarDescending",
 });
 
 const props = defineProps({
