@@ -43,3 +43,5 @@ for svg_file in svg_lib:
 
 print("\n")
 print(f"{colors.green('Done:')} Processed {utils.byte_size(all_size)} in {processed} files, with {errors} errors")
+
+

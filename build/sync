@@ -1,0 +1,6 @@
+#!/bin/bash
+
+rm -rf "../src"
+mkdir "../src"
+
+git clone https://github.com/Templarian/MaterialDesign.git "../src"
