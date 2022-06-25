@@ -1,6 +1,6 @@
 # Material design icons for Vue
 
-Icons from materialdesignicons.com rendered as PascalCase vue components with mdi prefix.
+Icons from materialdesignicons.com rendered as PascalCase vue components with Mdi prefix.
 
 > [Icon source: materialdesignicons.com](https://materialdesignicons.com/)
 

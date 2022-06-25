@@ -1,0 +1,25 @@
+{
+  "name": "materialdesignicons-vue3",
+  "version": "0.1.1",
+  "description": "Icons from materialdesignicons.com rendered as PascalCase vue components with Mdi prefix.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prochor666/materialdesignicons-vue3.git"
+  },
+  "keywords": [
+    "icons",
+    "svg",
+    "vue3",
+    "mdi"
+  ],
+  "author": "prochor666",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/prochor666/materialdesignicons-vue3/issues"
+  },
+  "homepage": "https://github.com/prochor666/materialdesignicons-vue3#readme"
+}
