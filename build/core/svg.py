@@ -16,11 +16,12 @@ def load(file):
                  ' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"': ''
             })
 
-            convert(template, os.path.basename(file))
+            index_pattern = convert(template, os.path.basename(file))
 
             return {
                 'file': os.path.basename(file),
                 'path': file,
+                'index_pattern': index_pattern,
                 'size_raw': meta.st_size,
                 'size': utils.byte_size(meta.st_size),
                 'error': ""
@@ -70,10 +71,15 @@ def convert(content, svg_file):
 
     with open(f"{library.target()}{vue_file}") as template:
 
+        index_pattern = f'module.exports.{vue_expose} = require("./{vue_file}")'
+
         template = vue_component(template.read(), vue_expose)
         utils.file_save(
             f"{library.target()}{vue_file}", template)
 
+        return index_pattern
+
+    return ''
 
 
 def vue_component(svg, expose):

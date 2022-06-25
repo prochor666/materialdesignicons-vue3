@@ -22,6 +22,8 @@ if os.path.exists(f"{library.target()}"):
 
 os.makedirs(library.target())
 
+index_file_content = ''
+
 for svg_file in svg_lib:
 
     file_meta = svg.load(f"{library.get_src()}{svg_file}")
@@ -34,10 +36,22 @@ for svg_file in svg_lib:
         break
     else:
 
+        index_pattern = file_meta['index_pattern']
+
+        if len(index_file_content)>0:
+
+            index_file_content = "\n".join([index_file_content, index_pattern])
+        else:
+
+            index_file_content = index_pattern
+
         all_size += file_meta['size_raw']
         processed += 1
         info_text = f"Processed {utils.byte_size(all_size)} in {processed} files, {file_meta['file']}"
         print(f"{colors.blue(' Converting:')} {info_text}", end = "\r")
+
+    utils.file_save(
+        f"{library.target()}index.js", index_file_content)
 
     sys.stdout.write('\033[2K\033[1G')
 
