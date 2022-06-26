@@ -1,6 +1,6 @@
 {
     "name": "materialdesignicons-vue3",
-    "version": "0.1.3",
+    "version": "0.2.0",
     "description": "Icons from materialdesignicons.com rendered as PascalCase vue components with Mdi prefix.",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
