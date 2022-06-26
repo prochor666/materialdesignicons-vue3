@@ -9,7 +9,7 @@ module.exports = function render(_ctx, _cache) {
     }, [
     _createVNode("path", {
             "fill-rule": "evenodd",
-            "clip-rule": "evenodd"
+            "clip-rule": "evenodd",
             d: "M12 2L1 21H23L12 2M10 15V10H14L12.5 13.5H14.5L11.5 19V15H10Z",
         })
     ]))
