@@ -7,8 +7,8 @@ def get_src():
     return utils.replace_all(f"{utils.app_root()}/{path}", r = {'/': os.path.sep})
 
 
-def target():
-    path = "../icons/"
+def target(plus = '/'):
+    path = f"../icons{plus}"
     return utils.replace_all(f"{utils.app_root()}/{path}", r={'/': os.path.sep})
 
 

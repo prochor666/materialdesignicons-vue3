@@ -1,27 +1,33 @@
 {
-  "name": "materialdesignicons-vue3",
-  "version": "0.1.2",
-  "description": "Icons from materialdesignicons.com rendered as PascalCase vue components with Mdi prefix.",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/prochor666/materialdesignicons-vue3.git"
-  },
-  "files": [
-    "icons"
-  ],
-  "keywords": [
-    "icons",
-    "svg",
-    "vue3",
-    "mdi"
-  ],
-  "author": "prochor666",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/prochor666/materialdesignicons-vue3/issues"
-  },
-  "homepage": "https://github.com/prochor666/materialdesignicons-vue3#readme"
+    "name": "materialdesignicons-vue3",
+    "version": "0.1.2",
+    "description": "Icons from materialdesignicons.com rendered as PascalCase vue components with Mdi prefix.",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/prochor666/materialdesignicons-vue3.git"
+    },
+    "files": [
+        "icons"
+    ],
+    "publishConfig": {
+        "access": "public"
+    },
+    "peerDependencies": {
+        "vue": ">= 3"
+    },
+    "keywords": [
+        "icons",
+        "svg",
+        "vue3",
+        "mdi"
+    ],
+    "author": "prochor666",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/prochor666/materialdesignicons-vue3/issues"
+    },
+    "homepage": "https://github.com/prochor666/materialdesignicons-vue3#readme"
 }

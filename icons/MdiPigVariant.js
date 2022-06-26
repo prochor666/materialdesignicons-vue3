@@ -1,0 +1,16 @@
+const { createVNode: _createVNode, openBlock: _openBlock, createBlock: _createBlock } = require("vue")
+
+module.exports = function render(_ctx, _cache) {
+    return (_openBlock(), _createBlock("svg", {
+        xmlns: "http://www.w3.org/2000/svg",
+        viewBox: "0 0 24 24",
+        fill: "currentColor",
+        "aria-hidden": "true"
+    }, [
+    _createVNode("path", {
+            "fill-rule": "evenodd",
+            "clip-rule": "evenodd"
+            d: "M19.83 7.5L17.56 5.23C17.63 4.81 17.74 4.42 17.88 4.08C17.96 3.9 18 3.71 18 3.5C18 2.67 17.33 2 16.5 2C14.86 2 13.41 2.79 12.5 4H7.5C4.46 4 2 6.46 2 9.5S4.5 21 4.5 21H10V19H12V21H17.5L19.18 15.41L22 14.47V7.5H19.83M16 11C15.45 11 15 10.55 15 10S15.45 9 16 9C16.55 9 17 9.45 17 10S16.55 11 16 11Z",
+        })
+    ]))
+}

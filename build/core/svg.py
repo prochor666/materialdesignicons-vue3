@@ -16,18 +16,21 @@ def load(file):
                  ' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"': ''
             })
 
-            index_pattern = convert(template, os.path.basename(file))
+            index_patterns = convert(template, os.path.basename(file))
 
             return {
                 'file': os.path.basename(file),
                 'path': file,
-                'index_pattern': index_pattern,
+                'index_patterns': index_patterns,
                 'size_raw': meta.st_size,
                 'size': utils.byte_size(meta.st_size),
                 'error': ""
             }
 
     except Exception as e:
+
+        print(e)
+
         return {
             'file': os.path.basename(file),
             'path': file,
@@ -40,49 +43,44 @@ def load(file):
 def convert(content, svg_file):
 
     root = ET.fromstring(content)
-
     root.set('xmlns', 'http://www.w3.org/2000/svg')
-    root.attrib.pop('id')
-    root.attrib.pop('viewBox')
-    root.attrib.pop('width')
-    root.attrib.pop('height')
-    root.set('fill', 'currentColor')
-    root.set(':class', 'class')
-    root.set(':viewBox', 'viewBox')
-    root.set(':width', 'size')
-    root.set(':height', 'size')
+    path = root.find('path')
 
-    for path in root.iter('path'):
-
-        path.set('fill-rule', 'evenodd')
-        path.set('clip-rule', 'evenodd')
-
-    tree = ET.ElementTree(root)
+    #print('PATH', path.get('d'))
 
     temp = os.path.splitext(svg_file)[0].split('-')
 
-    # joining result
-    #vue_file = temp[0] + ''.join(ele.title() for ele in temp[1:])
-    vue_file = f"Mdi{''.join(map(str.title, temp))}.vue"
-    vue_expose = f"Mdi{''.join(map(str.title, temp))}"
+    vue_exposed_name = f"Mdi{''.join(map(str.title, temp))}"
 
-    tree.write(
-        f"{library.target()}{vue_file}", encoding="utf-8")
+    js_index_pattern = f'module.exports.{vue_exposed_name} = require("./{vue_exposed_name}.js")'
+    js_esm_index_pattern = 'export { default as '+vue_exposed_name+' } from \'./'+vue_exposed_name+'.js\''
+    ts_index_pattern = 'export { default as '+vue_exposed_name+' } from \'./'+vue_exposed_name+'\''
 
-    with open(f"{library.target()}{vue_file}") as template:
+    # template = vue_component(template.read(), vue_expose)
+    js_template = vue_js_component_create(path.get('d'))
+    js_esm_template = vue_js_component_create(path.get('d'))
+    ts_template = vue_ts_component_create(vue_exposed_name)
 
-        index_pattern = f'module.exports.{vue_expose} = require("./{vue_file}")'
+    utils.file_save(
+        f"{library.target()}{vue_exposed_name}.js", js_template)
 
-        template = vue_component(template.read(), vue_expose)
-        utils.file_save(
-            f"{library.target()}{vue_file}", template)
+    utils.file_save(
+        f"{library.target('/esm/')}{vue_exposed_name}.js", js_esm_template)
 
-        return index_pattern
+    utils.file_save(
+        f"{library.target()}{vue_exposed_name}.d.ts", ts_template)
 
-    return ''
+    utils.file_save(
+        f"{library.target('/esm/')}{vue_exposed_name}.d.ts", ts_template)
+
+    return [
+        js_index_pattern,
+        js_esm_index_pattern,
+        ts_index_pattern
+    ]
 
 
-def vue_component(svg, expose):
+def vue_component(svg, vue_exposed_name):
 
     template = '''<template>
     '''+svg+'''
@@ -90,7 +88,7 @@ def vue_component(svg, expose):
 
 <script setup>
 defineExpose({
-    name: "'''+expose+'''",
+    name: "'''+vue_exposed_name+'''",
 });
 
 const props = defineProps({
@@ -108,6 +106,62 @@ const props = defineProps({
     },
 });
 </script>
+'''
+
+    return template
+
+
+def vue_js_component_create(d):
+
+    template = '''const { createVNode: _createVNode, openBlock: _openBlock, createBlock: _createBlock } = require("vue")
+
+module.exports = function render(_ctx, _cache) {
+    return (_openBlock(), _createBlock("svg", {
+        xmlns: "http://www.w3.org/2000/svg",
+        viewBox: "0 0 24 24",
+        fill: "currentColor",
+        "aria-hidden": "true"
+    }, [
+    _createVNode("path", {
+            "fill-rule": "evenodd",
+            "clip-rule": "evenodd"
+            d: "'''+d+'''",
+        })
+    ]))
+}
+'''
+
+    return template
+
+
+def vue_js_esm_component_create(d):
+
+    template = '''import { createVNode as _createVNode, openBlock as _openBlock, createBlock as _createBlock } from "vue"
+
+export default function render(_ctx, _cache) {
+    return (_openBlock(), _createBlock("svg", {
+        xmlns: "http://www.w3.org/2000/svg",
+        viewBox: "0 0 24 24",
+        fill: "currentColor",
+        "aria-hidden": "true"
+    }, [
+        _createVNode("path", {
+            "fill-rule": "evenodd",
+            "clip-rule": "evenodd"
+            d: "'''+d+'''",
+        })
+    ]))
+}
+'''
+
+    return template
+
+
+def vue_ts_component_create(vue_exposed_name):
+
+    template = '''import type { FunctionalComponent, HTMLAttributes, VNodeProps } from 'vue';
+declare const '''+vue_exposed_name+''': FunctionalComponent<HTMLAttributes & VNodeProps>;
+export default '''+vue_exposed_name+''';
 '''
 
     return template

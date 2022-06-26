@@ -21,8 +21,11 @@ if os.path.exists(f"{library.target()}"):
     shutil.rmtree(f"{library.target()}", ignore_errors=False, onerror=None)
 
 os.makedirs(library.target())
+os.makedirs(library.target('/esm/'))
 
-index_file_content = ''
+js_index_file_content = ''
+js_esm_index_file_content = ''
+ts_index_file_content = ''
 
 for svg_file in svg_lib:
 
@@ -36,14 +39,21 @@ for svg_file in svg_lib:
         break
     else:
 
-        index_pattern = file_meta['index_pattern']
+        index_patterns = file_meta['index_patterns']
 
-        if len(index_file_content)>0:
+        if len(js_index_file_content)>0:
 
-            index_file_content = "\n".join([index_file_content, index_pattern])
+            js_index_file_content = "\n".join(
+                [js_index_file_content, index_patterns[0]])
+            js_esm_index_file_content = "\n".join(
+                [js_esm_index_file_content, index_patterns[1]])
+            ts_index_file_content = "\n".join(
+                [ts_index_file_content, index_patterns[2]])
         else:
 
-            index_file_content = index_pattern
+            js_index_file_content = index_patterns[0]
+            js_esm_index_file_content = index_patterns[1]
+            ts_index_file_content = index_patterns[2]
 
         all_size += file_meta['size_raw']
         processed += 1
@@ -51,7 +61,16 @@ for svg_file in svg_lib:
         print(f"{colors.blue(' Converting:')} {info_text}", end = "\r")
 
     utils.file_save(
-        f"{library.target()}index.js", index_file_content)
+        f"{library.target()}index.js", js_index_file_content)
+
+    utils.file_save(
+        f"{library.target('/esm/')}index.js", js_esm_index_file_content)
+
+    utils.file_save(
+        f"{library.target()}index.d.ts", ts_index_file_content)
+
+    utils.file_save(
+        f"{library.target('/esm/')}index.d.ts", ts_index_file_content)
 
     sys.stdout.write('\033[2K\033[1G')
 
