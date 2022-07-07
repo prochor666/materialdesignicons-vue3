@@ -1,20 +1,24 @@
-# Material design icons for Vue
+# Material design icons for Vue 3
 
 Icons from materialdesignicons.com rendered as PascalCase vue components with Mdi prefix.
 
 > [Icon source: materialdesignicons.com](https://materialdesignicons.com/)
 
-## How to
+## How to (with Tailwind CSS)
 
 ```html
 <template>
     <p>
-        <MdiAbacus class="text-rose-400" /> Hello world
+        <MdiAbacus class="w-4 h-4 inline text-rose-400" /> Hello world
+        <MdiFormatBold class="w-4 h-4 inline text-rose-400" /> Hello world
     </p>
 </tempalte>
 
 <script setup>
-import MdiAbacus from '../components/MdiAbacus.vue';
+import {
+    MdiAbacus,
+    MdiFormatBold,
+} from 'materialdesignicons-vue3/icons/';
 </script>
 ```
 
