@@ -4,4 +4,4 @@ rd /S /Q "..\src"
 md "..\src"
 
 @ECHO ON
-git clone https://github.com/Templarian/MaterialDesign.git "..\src"
+git clone git@github.com:Templarian/MaterialDesign-SVG.git "..\src"

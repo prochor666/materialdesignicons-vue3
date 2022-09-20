@@ -1,52 +1,44 @@
-import os
-import xml.etree.ElementTree as ET
+import os, traceback
 from core import utils, library
+from xml.dom import minidom
 
-def load(file):
+def load(file_path):
 
     try:
-        meta = os.stat(file)
-        with open(file) as template:
+        meta = os.stat(file_path)
+        with open(file_path) as templateSrc:
 
-            template = template.read()
-            template = str(template).replace('<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">', '')
-
-            template = utils.replace_all(str(template), r = {
-                '<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">': '',
-                 ' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"': ''
-            })
-
-            index_patterns = convert(template, os.path.basename(file))
+            index_patterns = convert(file_path)
 
             return {
-                'file': os.path.basename(file),
-                'path': file,
+                'file': os.path.basename(file_path),
+                'path': file_path,
                 'index_patterns': index_patterns,
                 'size_raw': meta.st_size,
                 'size': utils.byte_size(meta.st_size),
-                'error': ""
+                'error': "",
+                'traceback': ""
             }
 
     except Exception as e:
 
-        print(e)
-
         return {
-            'file': os.path.basename(file),
-            'path': file,
+            'file': os.path.basename(file_path),
+            'path': file_path,
             'size_raw': 0,
             'size': utils.byte_size(0),
-            'error': f": {str(e)}"
+            'error': f": {str(e)}",
+            'traceback': f"{traceback.format_exc()}"
         }
 
 
-def convert(content, svg_file):
+def convert(file_path):
+    svg_file = os.path.basename(file_path)
 
-    root = ET.fromstring(content)
-    root.set('xmlns', 'http://www.w3.org/2000/svg')
-    path = root.find('path')
-
-    #print('PATH', path.get('d'))
+    doc = minidom.parse(file_path)
+    svgpath = [path.getAttribute('d') for path
+                in doc.getElementsByTagName('path')][0]
+    doc.unlink()
 
     temp = os.path.splitext(svg_file)[0].split('-')
 
@@ -57,8 +49,8 @@ def convert(content, svg_file):
     ts_index_pattern = 'export { default as '+vue_exposed_name+' } from \'./'+vue_exposed_name+'\''
 
     # template = vue_component(template.read(), vue_expose)
-    js_template = vue_js_component_create(path.get('d'))
-    js_esm_template = vue_js_component_create(path.get('d'))
+    js_template = vue_js_component_create(svgpath)
+    js_esm_template = vue_js_component_create(svgpath)
     ts_template = vue_ts_component_create(vue_exposed_name)
 
     utils.file_save(

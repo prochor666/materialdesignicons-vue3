@@ -35,7 +35,7 @@ for svg_file in svg_lib:
 
         errors += 1
         print(
-            f"{colors.red(' Error:')} {file_meta['file']}{file_meta['error']}", end="\r")
+            f"{colors.red(' Error:')} {file_meta['file']}{file_meta['error']} \n\n{colors.blue(' Traceback:')} {file_meta['traceback']}", end="\r")
         break
     else:
 
