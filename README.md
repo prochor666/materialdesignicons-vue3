@@ -25,7 +25,7 @@ import {
 
 ## How to build your own
 
-You need Pytohn 3 installed
+You need Python 3 installed
 
 ### Commands
 
